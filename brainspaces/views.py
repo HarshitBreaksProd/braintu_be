@@ -3,14 +3,14 @@ from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from braintu_be.braincards.permissions import IsOwnerOrSharedReadOnly
-from braintu_be.braincards.serializers import BrainCardSerializer
-from braintu_be.brainspaces.models import BrainSpace
+from .permissions import IsOwnerOrSharedReadOnly
+from .serializers import BrainSpaceSerializer
+from .models import BrainSpace
 
 
 class BrainSpaceViewset(viewsets.ModelViewSet):
     queryset = BrainSpace.objects.all()
-    serializer_class = BrainCardSerializer
+    serializer_class = BrainSpaceSerializer
     permission_classes = [IsAuthenticated, IsOwnerOrSharedReadOnly]
 
     def get_queryset(self):

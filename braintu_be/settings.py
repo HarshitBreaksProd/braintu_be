@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     "users",
     "brainspaces",
     "braincards",
-    "tags"
+    "tags",
 ]
 
 MIDDLEWARE = [

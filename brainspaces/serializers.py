@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from braintu_be.brainspaces.models import BrainSpace
 
-class BrainSpaceSerializer(serializers.ModelField):
+class BrainSpaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = BrainSpace
         fields = '__all__'

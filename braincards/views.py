@@ -5,9 +5,9 @@ from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
-from braintu_be.braincards.models import BrainCard
-from braintu_be.braincards.permissions import IsOwnerOrSharedReadOnly
-from braintu_be.braincards.serializers import BrainCardSerializer
+from .models import BrainCard
+from .permissions import IsOwnerOrSharedReadOnly
+from .serializers import BrainCardSerializer
 
 
 class BrainCardViewSet(viewsets.ModelViewSet):
