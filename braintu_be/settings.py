@@ -47,6 +47,9 @@ INSTALLED_APPS = [
 
     # internal apps
     "users",
+    "brainspaces",
+    "braincards",
+    "tags"
 ]
 
 MIDDLEWARE = [
