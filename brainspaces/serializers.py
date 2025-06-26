@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from braintu_be.brainspaces.models import BrainSpace
+from .models import BrainSpace
 
 class BrainSpaceSerializer(serializers.ModelSerializer):
     class Meta:

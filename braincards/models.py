@@ -14,7 +14,7 @@ class BrainCard(models.Model):
     link = models.URLField(blank=True)
     card_type = models.CharField(choices=CardTypes.choices, default=CardTypes.LINK)
     tags = models.ManyToManyField('tags.Tag', blank=True)
-    owner = models.ForeignKey('users.User', on_delete=models.CASCADE)
+    owner = models.ForeignKey('users.CustomUser', on_delete=models.CASCADE)
     is_shared = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     vectoredOnData = models.TextField(blank=True)
